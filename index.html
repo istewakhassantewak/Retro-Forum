@@ -15,7 +15,7 @@
 </head>
 
 <body class="font-mulish">
-    <header class="container mx-auto">
+    <header class="container mx-auto  p-2">
         <nav class="mt-6 mb-8">
             <div class="navbar">
                 <div class="navbar-start">
@@ -91,12 +91,13 @@
 
                             <div class="flex  items-center justify-between bg-white rounded-full md:mr-9 p-1 md:p-2">
                                 <!-- Input Field -->
-                                <input type="text" placeholder="Search here anything"
+                                <input id="search-text" type="text" placeholder="Search here anything"
                                     class="flex-grow bg-transparent border-none outline-none md:px-6 text-gray-500 placeholder-gray-400 p-2" />
 
                                 <!-- Search Button -->
-                                <button
-                                    class="bg-[#797DFC] text-white px-5 md:px-8 py-3 rounded-full font-bold hover:bg-[#6366f1] transition-colors">
+                                <button id="search-button"
+                                    class="bg-[#797DFC] text-white px-5 md:px-8 py-3 rounded-full font-bold hover:bg-[#6366f1] transition-colors"
+                                    onclick="searchFetch()">
                                     Search
                                 </button>
                             </div>
@@ -141,7 +142,7 @@
         </div>
     </header>
 
-    <main class="container mx-auto">
+    <main class="container mx-auto  p-2">
         <!-- discussions -->
         <section class="mt-16 mb-16">
             <div class="text-center space-y-6">
@@ -156,7 +157,7 @@
             <div class="mt-16 flex flex-col md:flex-row justify-between gap-4">
                 <div id="all-post-card" class="space-y-4">
                     <!-- all posts sit here -->
-                    <div id="loader" class="flex justify-center mt-8 hidden">
+                    <div id="loader" class="flex w-screen justify-center items-center mt-8 ">
                         <span class="loading loading-spinner text-accent"></span>
                     </div>
                 </div>
@@ -169,7 +170,7 @@
                                 class="flex items-center gap-2 text-gray-500 cursor-pointer hover:opacity-80 transition-opacity">
                                 <!-- Double Check Icon -->
                                 <img src="images/Frame.png" class="w-6 h-6" alt="">
-                                <span class="text-lg">Mark as read (4)</span>
+                                <span class="text-lg">Mark as read (<span id="count">0</span>)</span>
                             </div>
                         </div>
 
@@ -225,6 +226,9 @@
                     streamlined .</p>
             </div>
             <div class="max-w-7xl mx-auto p-6">
+                <div id="loader2" class="flex justify-center items-center mt-8">
+                    <span class="loading loading-spinner text-accent"></span>
+                </div>
                 <!-- Responsive Grid Container -->
                 <div id="latest-post" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
@@ -274,7 +278,7 @@
             </p>
         </div>
     </footer>
-    <script src="js/utlity.js"></script>
+    <script src="js/utility.js"></script>
     <script src="js/main.js"></script>
 </body>
 

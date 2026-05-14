@@ -1,8 +1,17 @@
 const allPostCard = document.getElementById('all-post-card')
 async function fetchAllPost() {
+
     const res = await fetch('https://openapi.programming-hero.com/api/retro-forum/posts')
     const data = await res.json();
     const persons = data.posts
+
+    foreachfunction(persons)
+    addClass1('loader', 'hidden');
+
+}
+removeClass1('loader', 'hidden');
+fetchAllPost()
+const foreachfunction = (persons) => {
     persons.forEach(person => {
         const newDiv = document.createElement('div')
         newDiv.classList = `bg-[#f3f3f5] p-6 rounded-[32px] w-full  border border-gray-100 shadow-sm`;
@@ -78,14 +87,15 @@ async function fetchAllPost() {
         } else {
             active.classList.add('bg-[#ff4d4d]')
         }
-    });
-
+    })
 }
-fetchAllPost()
-
+let count = 0;
+const markRead = document.getElementById('count')
 function loadData(desc, views) {
     const bookMark = document.getElementById('bookmark')
     const newDiv = document.createElement('div')
+    count++;
+    markRead.innerHTML = count;
     newDiv.classList = `bg-white p-6 rounded-3xl flex justify-between items-center shadow-sm`;
     newDiv.innerHTML = `<h3 class="text-[#12132d] font-bold text-lg leading-snug max-w-[70%]">
                                     ${desc}
@@ -103,7 +113,7 @@ async function fetchLatestPost() {
     const latestPost = document.getElementById('latest-post')
     const res = await fetch('https://openapi.programming-hero.com/api/retro-forum/latest-posts');
     const data = await res.json();
-    console.log(data)
+
     data.forEach(data => {
         const newDiv = document.createElement('div');
         newDiv.classList = `p-6 border border-gray-100 rounded-[32px] shadow-sm bg-white space-y-4`
@@ -131,6 +141,58 @@ async function fetchLatestPost() {
                             </div>
                         </div>`
         latestPost.append(newDiv)
+        addClass1('loader2', 'hidden');
     });
 }
-fetchLatestPost()
+removeClass1('loader2', 'hidden');
+fetchLatestPost();
+const searchButton = document.getElementById('search-button');
+const searchText = document.getElementById('search-text');
+
+
+async function searchFetch() {
+    removeClass1('loader', 'hidden');
+
+    try {
+        const res = await fetch(
+            `https://openapi.programming-hero.com/api/retro-forum/posts?category=${searchText.value}`
+        );
+
+        const data = await res.json();
+
+        const persons = data.posts;
+
+        console.log(persons);
+
+        allPostCard.innerHTML = '';
+
+        foreachfunction(persons);
+
+    } catch (error) {
+        console.log(error);
+    } finally {
+        addClass1('loader', 'hidden');
+    }
+}
+function addClass1(item, class1) {
+    console.log(item)
+    const element = document.getElementById(item);
+
+    if (!element) {
+        console.warn(`addClass1: #${item} not found`);
+        return;
+    }
+
+    element.classList.add(class1);
+}
+
+function removeClass1(item, class1) {
+    const element = document.getElementById(item);
+
+    if (!element) {
+        console.warn(`removeClass1: #${item} not found`);
+        return;
+    }
+
+    element.classList.remove(class1);
+}
