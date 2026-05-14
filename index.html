@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://kit.fontawesome.com/62003c3de8.js" crossorigin="anonymous"></script>
+    <title>Retro Forum</title>
+</head>
+
+<body class="font-mulish">
+    <header class="container mx-auto">
+        <nav class="mt-6 mb-8">
+            <div class="navbar">
+                <div class="navbar-start">
+                    <div class="dropdown">
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </div>
+                        <ul tabindex="-1"
+                            class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow space-y-4">
+                            <li>
+                                <a href="#" title="Home" class="btn btn-circle"><img src="images/Vector.png" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="#" title="Edit" class="btn btn-circle"><img src="images/Vector (1).png"
+                                        alt=""></a>
+                            </li>
+                            <li>
+                                <a href="#" title="Add" class="btn btn-circle"><img src="images/Vector (2).png"
+                                        alt=""></a>
+                            </li>
+                            <li>
+                                <a href="#" title="Flag" class="btn btn-circle"><img src="images/Vector (3).png"
+                                        alt=""></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <a class="btn btn-ghost text-xl"><img src="images/logo.png" alt=""></a>
+                </div>
+                <div class="navbar-end hidden lg:flex gap-5">
+                    <ul class="menu menu-horizontal px-1 space-x-3">
+                        <li>
+                            <a href="#" title="Home" class="btn btn-circle"><img src="images/Vector.png" alt=""></a>
+                        </li>
+                        <li>
+                            <a href="#" title="Edit" class="btn btn-circle"><img src="images/Vector (1).png" alt=""></a>
+                        </li>
+                        <li>
+                            <a href="#" title="Add" class="btn btn-circle"><img src="images/Vector (2).png" alt=""></a>
+                        </li>
+                        <li>
+                            <a href="#" title="Flag" class="btn btn-circle"><img src="images/Vector (3).png" alt=""></a>
+                        </li>
+                    </ul>
+                    <a class="btn bg-[#797DFC] rounded-[50px] px-5 py-3 text-white">Sign In</a>
+                </div>
+                <div class="navbar-end lg:hidden">
+                    <a class="btn bg-[#797DFC] rounded-[50px] px-5 py-3 text-white">Sign In</a>
+                </div>
+            </div>
+        </nav>
+        <div class="card  image-full bg-[#12132D] w-auto rounded-[32px]">
+            <figure class="mt-20 w-auto opacity-100">
+                <img src="images/bgbanner.png" alt="Shoes" class="w-full contrast-50" />
+            </figure>
+            <div class="card-body w-full text-white">
+                <div class="flex flex-col md:flex-row md:justify-between lg:mt-10 xl:mt-20">
+                    <div class="flex justify-center items-center mb-8 md:mb-0 lg:ml-24">
+                        <div class="space-y-5">
+                            <h2 class="font-black text-2xl md:text-4xl lg:text-6xl">Welcome to the <br> <span
+                                    class="bg-gradient-to-b from-[#797DFC] to-[#3D4085] bg-clip-text text-transparent">
+                                    ReTro
+                                </span>
+                                Forum</h2>
+                            <p class="font-medium text-sm text-wrap text-[#FFFFFFCC]">A Share your favorite opinion and
+                                win and wp <br> forum
+                                coffee
+                                mug!</p>
+
+
+                            <div class="flex  items-center justify-between bg-white rounded-full md:mr-9 p-1 md:p-2">
+                                <!-- Input Field -->
+                                <input type="text" placeholder="Search here anything"
+                                    class="flex-grow bg-transparent border-none outline-none md:px-6 text-gray-500 placeholder-gray-400 p-2" />
+
+                                <!-- Search Button -->
+                                <button
+                                    class="bg-[#797DFC] text-white px-5 md:px-8 py-3 rounded-full font-bold hover:bg-[#6366f1] transition-colors">
+                                    Search
+                                </button>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="lg:mr-24 flex items-center">
+
+
+                        <div class="bg-white rounded-[32px] p-10 w-full  space-y-5 text-[#12132D]">
+                            <!-- Registered Users -->
+                            <div class="flex justify-between md:gap-8 items-center text-lg">
+                                <span class="opacity-70 font-medium">Registered Users</span>
+                                <span class="opacity-70 font-medium">01</span>
+                            </div>
+
+                            <!-- Forum -->
+                            <div class="flex justify-between gap-8 items-center text-lg">
+                                <span class="opacity-70 font-medium">Forum</span>
+                                <span class="opacity-70 font-medium">05</span>
+                            </div>
+
+                            <!-- Topics -->
+                            <div class="flex justify-between gap-8 items-center text-lg">
+                                <span class="opacity-70 font-medium">Topics</span>
+                                <span class="opacity-70 font-medium">01</span>
+                            </div>
+
+                            <!-- Replies -->
+                            <div class="flex justify-between gap-8 items-center text-lg">
+                                <span class="opacity-70 font-medium">Replies</span>
+                                <span class="opacity-70 font-medium">01</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto">
+        <!-- discussions -->
+        <section class="mt-16 mb-16">
+            <div class="text-center space-y-6">
+                <h1 class="font-black text-4xl text-center">Let's Discuss</h1>
+                <p class="font-normal text-sm text-center text-[#12132D99]">Yes, you can run unit tests and view the
+                    results
+                    directly within the app. <br> The integrated testing
+                    features
+                    allow for a
+                    streamlined .</p>
+            </div>
+            <div class="mt-16 flex flex-col md:flex-row justify-between gap-4">
+                <div class="space-y-4">
+                    <div class="bg-[#f3f3f5] p-6 rounded-[32px] w-full  border border-gray-100 shadow-sm ">
+                        <div class="flex flex-col md:flex-row gap-6">
+                            <!-- Profile Image Placeholder -->
+                            <div class="relative flex-shrink-0">
+                                <div class="w-16 h-16 bg-white rounded-2xl shadow-sm"></div>
+                                <!-- Red Notification Dot -->
+                                <div
+                                    class="absolute -top-1 -right-1 w-4 h-4 bg-[#ff4d4d] rounded-full border-2 border-[#f3f3f5]">
+                                </div>
+                            </div>
+
+                            <!-- Content Area -->
+                            <div class="flex-grow">
+                                <!-- Header Info -->
+                                <div class="flex gap-4 text-sm text-gray-600 mb-2">
+                                    <span class="font-medium"># Coding</span>
+                                    <span>Author : Safia Chowdhury</span>
+                                </div>
+
+                                <!-- Title -->
+                                <h2 class="text-xl font-bold text-[#12132d] mb-3">
+                                    10 Kids Unaware of Their Halloween Costume
+                                </h2>
+
+                                <!-- Description -->
+                                <p class="text-gray-500 leading-relaxed mb-5">
+                                    It's one thing to subject yourself to a Halloween costume mishap because, hey that's
+                                    your prerogative
+                                </p>
+
+                                <!-- Dotted Divider -->
+                                <div class="border-t border-dashed border-gray-300 mb-5"></div>
+
+                                <!-- Footer Stats -->
+                                <div class="flex flex-col md:flex-row items-center justify-between">
+                                    <div class="flex items-center gap-6 text-gray-500">
+                                        <!-- Comment Icon & Count -->
+                                        <div class="flex items-center gap-2">
+                                            <img src="images/replies.png" class="w-5 h-5" alt="">
+                                            <span>560</span>
+                                        </div>
+
+                                        <!-- View Icon & Count -->
+                                        <div class="flex items-center gap-2">
+                                            <img src="images/view.png" class="w-5 h-5" alt="">
+                                            <span>1,568</span>
+                                        </div>
+
+                                        <!-- Time Icon & Duration -->
+                                        <div class="flex items-center gap-2">
+                                            <img src="images/clock.png" class="w-5 h-5" alt="">
+                                            <span>5 min</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Green Bookmark/Action Button -->
+                                    <div
+                                        class="rounded-full text-white cursor-pointer hover:bg-[#059669] transition-colors mt-5 md:mt-0">
+                                        <img src="images/click.png" class="w-11" alt="">
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div>
+                    <div class="bg-[#f3f3f5] p-8 rounded-[32px] w-full max-w-lg font-sans">
+                        <!-- Header Section -->
+                        <div class="flex justify-between items-center mb-6 px-2">
+                            <h2 class="text-2xl font-bold text-[#12132d]">Title</h2>
+                            <div
+                                class="flex items-center gap-2 text-gray-500 cursor-pointer hover:opacity-80 transition-opacity">
+                                <!-- Double Check Icon -->
+                                <img src="images/Frame.png" class="w-6 h-6" alt="">
+                                <span class="text-lg">Mark as read (4)</span>
+                            </div>
+                        </div>
+
+                        <!-- List of Cards -->
+                        <div class="space-y-4">
+                            <!-- Item 1 -->
+                            <div class="bg-white p-6 rounded-3xl flex justify-between items-center shadow-sm">
+                                <h3 class="text-[#12132d] font-bold text-lg leading-snug max-w-[70%]">
+                                    10 Kids Unaware of Their Halloween Costume
+                                </h3>
+                                <div class="flex items-center gap-2 text-gray-500">
+                                    <img src="images/view.png" alt="">
+                                    <span class="text-lg">1,568</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- join our forum -->
+
+        <section class="mt-16 mb-16">
+            <div
+                class="bg-[#12132D] rounded-[32px] p-8 lg:p-16 flex flex-col lg:flex-row items-center justify-between gap-10 overflow-hidden min-h-[400px]">
+
+                <!-- Left Content Side -->
+                <div class="flex-1 flex flex-col items-center lg:items-start text-white space-y-6">
+                    <h2 class="text-4xl lg:text-5xl font-black">
+                        Join Our Forum
+                    </h2>
+                    <p class="text-gray-300 text-lg leading-relaxed max-w-lg">
+                        Share your favorite opinion and win and wp forum coffee mug! Yes, you can
+                        run unit tests and view the results directly within the app.
+                    </p>
+
+                    <button
+                        class="bg-[#797DFC] hover:bg-[#6366f1] text-white px-10 py-4 font-bold text-xl transition-all rounded-[50px]">
+                        Registered Now
+                    </button>
+                </div>
+
+                <!-- Right Illustration Side -->
+                <div class="flex-1 flex justify-center lg:justify-end relative">
+                    <!-- Background Glow Effect from image_a209b6.png -->
+                    <div class="absolute inset-0 bg-white/5 rounded-full blur-3xl scale-75"></div>
+
+                    <!-- Replace 'illustration.png' with your actual image file -->
+                    <img src="images/joinforum.png" alt="Forum Illustration"
+                        class="relative z-10 w-full max-w-md object-contain" />
+                </div>
+            </div>
+        </section>
+        <section>
+
+        </section>
+
+
+    </main>
+
+    <footer>
+
+    </footer>
+
+</body>
+
+</html>
