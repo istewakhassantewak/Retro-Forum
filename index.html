@@ -155,79 +155,15 @@
             </div>
             <div class="mt-16 flex flex-col md:flex-row justify-between gap-4">
                 <div id="all-post-card" class="space-y-4">
-                    <div class="bg-[#f3f3f5] p-6 rounded-[32px] w-full  border border-gray-100 shadow-sm ">
-                        <div class="flex flex-col md:flex-row gap-6">
-                            <!-- Profile Image Placeholder -->
-                            <div class="relative flex-shrink-0">
-                                <div class="w-16 h-16 bg-white rounded-2xl shadow-sm"><img src="images/joinforum.png"
-                                        alt=""></div>
-                                <!-- Red Notification Dot -->
-                                <div
-                                    class="absolute -top-1 -right-1 w-4 h-4 bg-[#ff4d4d] rounded-full border-2 border-[#f3f3f5]">
-                                </div>
-                            </div>
-
-                            <!-- Content Area -->
-                            <div class="flex-grow">
-                                <!-- Header Info -->
-                                <div class="flex gap-4 text-sm text-gray-600 mb-2">
-                                    <span class="font-medium"># Coding</span>
-                                    <span>Author : Safia Chowdhury</span>
-                                </div>
-
-                                <!-- Title -->
-                                <h2 class="text-xl font-bold text-[#12132d] mb-3">
-                                    10 Kids Unaware of Their Halloween Costume
-                                </h2>
-
-                                <!-- Description -->
-                                <p class="text-gray-500 leading-relaxed mb-5">
-                                    It's one thing to subject yourself to a Halloween costume mishap because, hey that's
-                                    your prerogative
-                                </p>
-
-                                <!-- Dotted Divider -->
-                                <div class="border-t border-dashed border-gray-300 mb-5"></div>
-
-                                <!-- Footer Stats -->
-                                <div class="flex flex-col md:flex-row items-center justify-between">
-                                    <div class="flex items-center gap-6 text-gray-500">
-                                        <!-- Comment Icon & Count -->
-                                        <div class="flex items-center gap-2">
-                                            <img src="images/replies.png" class="w-5 h-5" alt="">
-                                            <span>560</span>
-                                        </div>
-
-                                        <!-- View Icon & Count -->
-                                        <div class="flex items-center gap-2">
-                                            <img src="images/view.png" class="w-5 h-5" alt="">
-                                            <span>1,568</span>
-                                        </div>
-
-                                        <!-- Time Icon & Duration -->
-                                        <div class="flex items-center gap-2">
-                                            <img src="images/clock.png" class="w-5 h-5" alt="">
-                                            <span>5 min</span>
-                                        </div>
-                                    </div>
-
-                                    <!-- Green Bookmark/Action Button -->
-                                    <div
-                                        class="rounded-full text-white cursor-pointer hover:bg-[#059669] transition-colors mt-5 md:mt-0">
-                                        <img src="images/click.png" class="w-11" alt="">
-                                        </svg>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <!-- all posts sit here -->
+                    <div id="loader" class="flex justify-center mt-8 hidden">
+                        <span class="loading loading-spinner text-accent"></span>
                     </div>
-
-
                 </div>
                 <div>
                     <div class="bg-[#f3f3f5] p-8 rounded-[32px] w-full max-w-lg font-sans">
                         <!-- Header Section -->
-                        <div class="flex justify-between items-center mb-6 px-2">
+                        <div class="flex justify-between items-center gap-20 mb-6 px-2">
                             <h2 class="text-2xl font-bold text-[#12132d]">Title</h2>
                             <div
                                 class="flex items-center gap-2 text-gray-500 cursor-pointer hover:opacity-80 transition-opacity">
@@ -238,17 +174,9 @@
                         </div>
 
                         <!-- List of Cards -->
-                        <div class="space-y-4">
-                            <!-- Item 1 -->
-                            <div class="bg-white p-6 rounded-3xl flex justify-between items-center shadow-sm">
-                                <h3 class="text-[#12132d] font-bold text-lg leading-snug max-w-[70%]">
-                                    10 Kids Unaware of Their Halloween Costume
-                                </h3>
-                                <div class="flex items-center gap-2 text-gray-500">
-                                    <img src="images/view.png" alt="">
-                                    <span class="text-lg">1,568</span>
-                                </div>
-                            </div>
+                        <div id="bookmark" class="space-y-4">
+                            <!-- Items -->
+
 
                         </div>
                     </div>
@@ -298,32 +226,9 @@
             </div>
             <div class="max-w-7xl mx-auto p-6">
                 <!-- Responsive Grid Container -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div id="latest-post" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-                    <!-- Card 1 -->
-                    <div class="p-6 border border-gray-100 rounded-[32px] shadow-sm bg-white space-y-4">
-                        <div class="aspect-video bg-[#F3F3F3] rounded-2xl w-full"><img src="images/Rectangle 1.png"
-                                class="w-full h-full" alt=""></div>
-                        <div class="flex items-center gap-2 text-gray-500 text-sm">
-                            <img src="images/calender.png" alt="">
-                            <span>29 January 2024</span>
-                        </div>
-                        <h3 class="text-xl font-extrabold text-[#12132D] leading-tight">
-                            What will a mars habitat force that impact in our daily life!!!
-                        </h3>
-                        <p class="text-gray-500 text-sm leading-relaxed">
-                            Yes, you can run unit tests and view the results directly within the app.
-                        </p>
-                        <div class="flex items-center gap-3 pt-2">
-                            <div class="w-10 h-10 rounded-full bg-gray-200 overflow-hidden border border-gray-100">
-                                <img src="images/joinforum.png" alt="">
-                            </div>
-                            <div>
-                                <p class="font-bold text-[#12132D] text-sm">Cameron Williamson</p>
-                                <p class="text-gray-400 text-xs">Unknown</p>
-                            </div>
-                        </div>
-                    </div>
+                    <!-- Cards append here -->
 
                 </div>
             </div>
@@ -346,16 +251,16 @@
 
             <!-- Social Icons -->
             <div class="flex items-center gap-8 text-[#12132D] mb-12">
-                <a href="#" class="hover:text-[#797DFC] transition-colors">
+                <a title="Twitter" ahref="#" class="hover:text-[#797DFC] transition-colors">
                     <i class="fa-brands fa-twitter text-2xl"></i>
                 </a>
-                <a href="#" class="hover:text-[#797DFC] transition-colors">
+                <a title="Facebbok" href="#" class="hover:text-[#797DFC] transition-colors">
                     <i class="fa-brands fa-facebook-f text-2xl"></i>
                 </a>
-                <a href="#" class="hover:text-[#797DFC] transition-colors">
+                <a title="Instagram" href="#" class="hover:text-[#797DFC] transition-colors">
                     <i class="fa-brands fa-instagram text-2xl"></i>
                 </a>
-                <a href="#" class="hover:text-[#797DFC] transition-colors">
+                <a title="GitHub" href="#" class="hover:text-[#797DFC] transition-colors">
                     <i class="fa-brands fa-github text-2xl"></i>
                 </a>
             </div>
